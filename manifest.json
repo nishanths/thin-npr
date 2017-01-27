@@ -8,21 +8,15 @@
 
     "content_scripts": [
        {
-          // /s.php is stories.
           "matches":    ["*://thin.npr.org/s.php*"],
           "css":        ["story.css"]
        },
        {
-          // Front page, News sections, Programs sections.
-          // Rewrite story links to open in expanded view.
-          // (No need to click on "Read more...").
           "matches":    ["*://thin.npr.org/", "*://thin.npr.org/t.php*", "*://thin.npr.org/p.php*"],
           "run_at":     "document_end",
           "js":         ["link.js"]
        },
        {
-          // npr.org main site: clicking on the text-only link in footer should navigate to the
-          // thin version of the current story, not the front page.
           "matches":    ["*://www.npr.org/*", "*://npr.org/*"],
           "run_at":     "document_end",
           "js":         ["to-thin.js"]
