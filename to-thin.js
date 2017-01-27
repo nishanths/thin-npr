@@ -4,7 +4,7 @@ const pathMap = {
     // Main sections: News, Arts, Music.
     "/sections/news": ["/t.php", "tid=1001"],
     "/sections/arts": ["/t.php", "tid=1008"],
-    "/music":        ["/t.php", "tid=1039"],
+    "/music":         ["/t.php", "tid=1039"],
     // No support for Programs yet.
 };
 
@@ -13,16 +13,12 @@ var isTextOnlyLink = (a) => {
         a.textContent.toLowerCase() === "text-only";
 };
 
-var makeThinStoryLink = (id) => {
-};
-
 var rewrite = (a) => {
     var p = window.location.pathname;
     // Remove trailing slash if any.
     if (p[p.length-1] === '/') {
         p = p.substring(0, p.length-1);
     }
-    console.log(p);
 
     var thin = pathMap[p];
     if (thin != null) {
@@ -48,6 +44,7 @@ var rewrite = (a) => {
 var run = () => {
     var footer = document.querySelector("#nprfooter");
     if (footer == null) {
+        console.warn("'#nprfooter' not found: npr.org page structure may have changed.")
         return;
     }
     var anchors = footer.querySelectorAll("a");
