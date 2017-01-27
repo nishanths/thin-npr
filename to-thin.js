@@ -1,5 +1,3 @@
-console.log("hello");
-
 const nprStoryIdRx = /\/\d{4}\/\d{2}\/\d{2}\/(\d+)\//;
 
 const pathMap = {
