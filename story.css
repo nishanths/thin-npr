@@ -5,11 +5,3 @@ body {
     margin: 1em auto;
     padding: 0 1em;
 }
-
-/* colors for nytimes.com */
-a {
-    color: #326891
-}
-a:visited {
-    color: #879cb4;
-}
