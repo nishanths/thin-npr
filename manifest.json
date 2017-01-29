@@ -7,9 +7,13 @@
     "author": "Nishanth Shanmugham",
 
     "content_scripts": [
+      {
+         "matches":    ["*://thin.npr.org/*"],
+         "css":        ["general.css"]
+      },
        {
           "matches":    ["*://thin.npr.org/s.php*"],
-          "css":        ["story.css", "color.css"]
+          "css":        ["color.css"]
        },
        {
           "matches":    ["*://thin.npr.org/", "*://thin.npr.org/t.php*", "*://thin.npr.org/p.php*"],
