@@ -1,19 +1,15 @@
 {
     "manifest_version": 2,
     "name": "thin.npr.org improved",
-    "version": "0.2",
+    "version": "0.3",
 
     "description": "Improvements to browsing and accessing thin.npr.org",
     "author": "Nishanth Shanmugham",
 
     "content_scripts": [
-      {
-         "matches":    ["*://thin.npr.org/*"],
-         "css":        ["color.css"]
-      },
        {
           "matches":    ["*://thin.npr.org/s.php*"],
-          "css":        ["story.css"]
+          "css":        ["story.css", "color.css"]
        },
        {
           "matches":    ["*://thin.npr.org/", "*://thin.npr.org/t.php*", "*://thin.npr.org/p.php*"],
