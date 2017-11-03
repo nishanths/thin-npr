@@ -1,5 +1,5 @@
 // Rewrite thin.npr.org links in the footer of regular npr.org to point
-// to the specific thin page instead of to the thin home page.
+// to the specific thin page instead of the thin home page.
 
 (function() {
   const nprStoryIdRx = /\/\d{4}\/\d{2}\/\d{2}\/(\d+)\//;
